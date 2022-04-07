@@ -17,3 +17,16 @@ observable.subscribe({
   error: (error) => console.log(error),
   complete: () => console.log('completed'),
 });
+
+//alternative syntax ES6 method syntax
+observable.subscribe({
+  next(value) {
+    console.log(value.currentTarget);
+  },
+  error(error) {
+    console.log(error);
+  },
+  complete() {
+    console.log('completed');
+  },
+});
